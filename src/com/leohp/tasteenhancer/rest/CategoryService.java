@@ -3,6 +3,7 @@ package com.leohp.tasteenhancer.rest;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.ejb.EJB;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 import javax.ws.rs.core.MediaType;
@@ -10,9 +11,7 @@ import javax.ws.rs.core.UriInfo;
 
 import com.leohp.tasteenhancer.dao.CategoryDao;
 import com.leohp.tasteenhancer.dao.DaoFactory;
-import com.leohp.tasteenhancer.dto.CategoryDto;
-import com.leohp.tasteenhancer.dto.CategoryMapper;
-import com.leohp.tasteenhancer.dto.CreateCategory;
+import com.leohp.tasteenhancer.dto.*;
 import com.leohp.tasteenhancer.entity.Category;
 
 @Path("/categories")
@@ -47,7 +46,7 @@ public class CategoryService {
 
         Category c = categoryDao.findById(id);
 
-        DetailedCategoryDTO detailedCategoryDTO = DetailedCategoryDTO.categoryToDTO(c);
+        DetailedCategoryDto detailedCategoryDTO = DetailedCategoryMapper.INSTANCE.categoryToCategoryDto(c);
         return Response.ok(detailedCategoryDTO).status(Response.Status.OK).build();
 
     }

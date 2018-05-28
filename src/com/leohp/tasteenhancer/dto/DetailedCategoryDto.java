@@ -1,13 +1,14 @@
 package com.leohp.tasteenhancer.dto;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class DetailedCategoryDto implements Serializable {
 
     private Long id;
     private String name;
 
-    private List<CategoryProductDTO> productList;
+    private List<CategoryIngredientDto> productList;
     public Long getId() {
         return id;
     }
@@ -41,7 +42,7 @@ public class DetailedCategoryDto implements Serializable {
         this.productList = productList;
     }
 
-    public static DetailedCategoryDto categoryToDTO(Category category){
+    /*public static DetailedCategoryDto categoryToDTO(Category category){
         List<Product> pList =  category.getCategoryProducts();
         List<CategoryProductDTO> products = new ArrayList<CategoryProductDTO>();
         for (Product p : pList){
@@ -56,5 +57,5 @@ public class DetailedCategoryDto implements Serializable {
             detailedCategoryDTOList.add(DetailedCategoryDTO.categoryToDTO(c));
         }
         return detailedCategoryDTOList;
-    }
+    }*/
 }
