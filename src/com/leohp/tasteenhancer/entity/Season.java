@@ -29,6 +29,10 @@ public class Season implements Serializable {
         // TODO Auto-generated constructor stub
     }
 
+    public Season(String name) {
+        this.name = name;
+    }
+
     public Long getId() {
         return id;
     }

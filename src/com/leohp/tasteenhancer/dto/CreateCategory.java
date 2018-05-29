@@ -4,6 +4,8 @@ public class CreateCategory {
 
     private String name;
 
+    private CreateCategory(){}
+
     public CreateCategory(String name) {
         this.name = name;
     }

@@ -29,6 +29,10 @@ public class Origin implements Serializable {
         // TODO Auto-generated constructor stub
     }
 
+    public Origin(String name) {
+        this.name = name;
+    }
+
     public Long getId() {
         return id;
     }

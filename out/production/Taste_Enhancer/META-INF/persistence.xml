@@ -5,11 +5,12 @@
     <persistence-unit name="PU" transaction-type="JTA">
         <description>JPA Demo</description>
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <jta-data-source>jdbc/__mysql</jta-data-source>
+        <jta-data-source>jdbc/__mysql_taste_enhancer</jta-data-source>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
             <!-- Required in hibernate versions >= 4.3 -->
-            <property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.SunOneJtaPlatform"/>
+            <property name="hibernate.transaction.jta.platform"
+                      value="org.hibernate.service.jta.platform.internal.SunOneJtaPlatform"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
         </properties>
     </persistence-unit>

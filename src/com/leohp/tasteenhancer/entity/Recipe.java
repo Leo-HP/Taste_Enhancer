@@ -30,6 +30,15 @@ public class Recipe implements Serializable {
         // TODO Auto-generated constructor stub
     }
 
+    public Recipe(String name) {
+        this.name = name;
+    }
+
+    public Recipe(String name, List<Ingredient> ingredients) {
+        this.name = name;
+        this.ingredients = ingredients;
+    }
+
     public Long getId() {
         return id;
     }

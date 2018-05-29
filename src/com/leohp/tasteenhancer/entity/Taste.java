@@ -27,6 +27,10 @@ public class Taste implements Serializable {
     public Taste() {
     }
 
+    public Taste(String name) {
+        this.name = name;
+    }
+
     public Long getId() {
         return id;
     }

@@ -8,7 +8,8 @@ public class DetailedCategoryDto implements Serializable {
     private Long id;
     private String name;
 
-    private List<CategoryIngredientDto> productList;
+    private List<CategoryIngredientDto> ingredientDtoList;
+
     public Long getId() {
         return id;
     }
@@ -16,6 +17,7 @@ public class DetailedCategoryDto implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getName() {
         return name;
     }
@@ -24,12 +26,12 @@ public class DetailedCategoryDto implements Serializable {
         this.name = name;
     }
 
-    public List<CategoryIngredientDto> getProductList() {
-        return productList;
+    public List<CategoryIngredientDto> getIngredientDtoListList() {
+        return ingredientDtoList;
     }
 
-    public void setProductList(List<CategoryIngredientDto> productList) {
-        this.productList = productList;
+    public void setProductList(List<CategoryIngredientDto> ingredientDtoList) {
+        this.ingredientDtoList = ingredientDtoList;
     }
 
     public DetailedCategoryDto() {
@@ -39,7 +41,7 @@ public class DetailedCategoryDto implements Serializable {
     private DetailedCategoryDto(Long id, String name, List<CategoryIngredientDto> productList) {
         this.id = id;
         this.name = name;
-        this.productList = productList;
+        this.ingredientDtoList = productList;
     }
 
     /*public static DetailedCategoryDto categoryToDTO(Category category){

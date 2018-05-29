@@ -4,26 +4,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.EJB;
+import javax.ejb.Stateless;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.UriInfo;
 
 import com.leohp.tasteenhancer.dao.CategoryDao;
-import com.leohp.tasteenhancer.dao.DaoFactory;
 import com.leohp.tasteenhancer.dto.*;
 import com.leohp.tasteenhancer.entity.Category;
 
+@Stateless
 @Path("/categories")
 public class CategoryService {
 
+    @EJB
     private CategoryDao categoryDao;
 
     @Context
     UriInfo uriInfo;
 
+
+
+
     public CategoryService() {
-        categoryDao = DaoFactory.getCategoryDao();
+
     }
 
     @GET
