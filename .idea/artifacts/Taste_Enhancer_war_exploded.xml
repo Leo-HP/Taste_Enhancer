@@ -9,6 +9,8 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Mojarra-2.2.1" />
+          <element id="library" level="project" name="mapstruct-1.2.0.Final" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jsr311-api-1.1.jar" />
           <element id="library" level="project" name="lib" />
         </element>
       </element>

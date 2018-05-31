@@ -19,14 +19,15 @@ public class Origin implements Serializable {
     private Long id;
     private String name;
 
-    @ManyToMany
-    @JoinTable(name="origin_ingredient",
-            joinColumns=@JoinColumn(name="origin_id", referencedColumnName="id"),
-            inverseJoinColumns=@JoinColumn(name="ingredient_id", referencedColumnName="id"))
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "origins")
     private List<Ingredient> ingredients;
 
     public Origin() {
         // TODO Auto-generated constructor stub
+    }
+
+    public Origin(String name) {
+        this.name = name;
     }
 
     public Long getId() {

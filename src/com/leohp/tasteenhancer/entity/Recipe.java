@@ -20,7 +20,7 @@ public class Recipe implements Serializable {
     private Long id;
     private String name;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
     @JoinTable(name="recipe_ingredient",
             joinColumns=@JoinColumn(name="recipe_id", referencedColumnName="id"),
             inverseJoinColumns=@JoinColumn(name="ingredient_id", referencedColumnName="id"))
@@ -28,6 +28,17 @@ public class Recipe implements Serializable {
 
     public Recipe() {
         // TODO Auto-generated constructor stub
+    }
+
+    public Recipe(String name) {
+        this.name = name;
+    }
+
+
+
+    public Recipe(String name, List<Ingredient> ingredients) {
+        this.name = name;
+        this.ingredients = ingredients;
     }
 
     public Long getId() {

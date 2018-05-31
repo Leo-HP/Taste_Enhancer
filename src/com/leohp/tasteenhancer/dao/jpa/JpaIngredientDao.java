@@ -1,60 +1,58 @@
 package com.leohp.tasteenhancer.dao.jpa;
 
+import com.leohp.tasteenhancer.dao.IngredientDao;
+import com.leohp.tasteenhancer.entity.*;
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Query;
-
-import com.leohp.tasteenhancer.dao.IngredientDao;
-import com.leohp.tasteenhancer.entity.Ingredient;
-
+@Stateless
 public class JpaIngredientDao implements IngredientDao {
 
-    private EntityManagerFactory emf;
-
-    public JpaIngredientDao(EntityManagerFactory entityManagerFactory) {
-        this.emf = entityManagerFactory;
-    }
+    @PersistenceContext(name = "PU")
+    private EntityManager entityManager;
 
     @Override
     public void create(Ingredient object) {
-        EntityManager em = emf.createEntityManager();
-        EntityTransaction et = em.getTransaction();
-        try {
-            et.begin();
-            em.persist(object);
-            et.commit();
-        }finally {
-            if (et.isActive()) {
-                et.rollback();
-            }
-            em.close();
+        List<Category> categories = new ArrayList<>();
+        for (Category category : object.getCategories()) {
+            categories.add(entityManager.find(Category.class, category.getId()));
         }
+        List<Origin> origins = new ArrayList<>();
+        for (Origin origin : object.getOrigins()) {
+            origins.add(entityManager.find(Origin.class, origin.getId()));
+        }
+        List<Season> seasons = new ArrayList<>();
+        for (Season season : object.getSeasons()) {
+            seasons.add(entityManager.find(Season.class, season.getId()));
+        }
+        List<Taste> tastes = new ArrayList<>();
+        for (Taste taste : object.getTastes()) {
+            tastes.add(entityManager.find(Taste.class, taste.getId()));
+        }
+        entityManager.persist(object);
     }
 
     @Override
     public Ingredient findById(Long id) {
-        EntityManager em = emf.createEntityManager();
-        Ingredient ingredient = em.find(Ingredient.class, id);
-        em.close();
+        Ingredient ingredient = entityManager.find(Ingredient.class, id);
         return ingredient;
     }
 
     @Override
     public List<Ingredient> findAll() {
-        EntityManager em = emf.createEntityManager();
-        Query query = em.createQuery("Select ingredients from Ingredient indredients");
+        Query query = entityManager.createQuery("Select ingredients from Ingredient indredients");
         List<Ingredient> results = query.getResultList();
-        em.close();
         return results;
     }
 
     @Override
     public void update(Ingredient object) {
-        EntityManager em = emf.createEntityManager();
-        Query query = em.createQuery("update Ingredient ing set ing.name=:name, ing.categories=:categories, ing.origins=:origins, ing.seasons=:seasons, ing.tastes=:tastes, ing.recipes=:recipes where ing.id=:id");
+        Query query = entityManager.createQuery("update Ingredient ing set ing.name=:name, ing.categories=:categories, ing.origins=:origins, ing.seasons=:seasons, ing.tastes=:tastes, ing.recipes=:recipes where ing.id=:id");
         query.setParameter("name", object.getName());
         query.setParameter("id", object.getId());
         query.setParameter("categories", object.getCategories());
@@ -62,52 +60,19 @@ public class JpaIngredientDao implements IngredientDao {
         query.setParameter("seasons", object.getSeasons());
         query.setParameter("tastes", object.getTastes());
         query.setParameter("recipes", object.getRecipes());
-        EntityTransaction et = em.getTransaction();
-        try {
-            et.begin();
-            query.executeUpdate();
-            et.commit();
-        } finally {
-            if (et.isActive()) {
-                et.rollback();
-            }
-            em.close();
-        }
-
+        query.executeUpdate();
     }
 
     @Override
     public void remove(Long id) {
-        EntityManager em = emf.createEntityManager();
-        EntityTransaction et = em.getTransaction();
-        try {
-            et.begin();
-            Ingredient ingredient = em.find(Ingredient.class, id);
-            em.remove(ingredient);
-            et.commit();
-        } finally {
-            if (et.isActive()) {
-                et.rollback();
-            }
-            em.close();
-        }
-
+        Ingredient ingredient = entityManager.find(Ingredient.class, id);
+        entityManager.remove(ingredient);
     }
 
     @Override
     public void remove(Ingredient object) {
-        EntityManager em = emf.createEntityManager();
-        EntityTransaction et = em.getTransaction();
-        try {
-            et.begin();
-            Ingredient ingredient = em.find(Ingredient.class, object.getId());
-            em.remove(ingredient);
-            et.commit();
-        } finally {
-            if (et.isActive()) {
-                et.rollback();
-            }
-            em.close();
-        }
+        Ingredient ingredient = entityManager.find(Ingredient.class, object.getId());
+        entityManager.remove(ingredient);
+
     }
 }
