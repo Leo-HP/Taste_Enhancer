@@ -7,6 +7,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Stateless
@@ -28,8 +29,7 @@ public class JpaSeasonDao implements SeasonDao {
 
     @Override
     public List<Season> findAll() {
-        Query query = em.createQuery("Select seasons from Season seasons");
-        List<Season> results = query.getResultList();
+        List<Season> results = em.createQuery("SELECT s FROM Season s").getResultList();
         return results;
     }
 

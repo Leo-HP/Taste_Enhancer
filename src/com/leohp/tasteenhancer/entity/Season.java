@@ -19,10 +19,7 @@ public class Season implements Serializable {
     private Long id;
     private String name;
 
-    @ManyToMany
-    @JoinTable(name="season_ingredient",
-            joinColumns=@JoinColumn(name="season_id", referencedColumnName="id"),
-            inverseJoinColumns=@JoinColumn(name="ingredient_id", referencedColumnName="id"))
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "seasons")
     private List<Ingredient> ingredients;
 
     public Season() {

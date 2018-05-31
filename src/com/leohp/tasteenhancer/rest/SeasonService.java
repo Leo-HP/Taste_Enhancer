@@ -1,14 +1,16 @@
 package com.leohp.tasteenhancer.rest;
 
 import com.leohp.tasteenhancer.dao.SeasonDao;
-import com.leohp.tasteenhancer.dto.*;
+import com.leohp.tasteenhancer.dto.CreateSeason;
+import com.leohp.tasteenhancer.dto.DetailedSeasonDto;
+import com.leohp.tasteenhancer.dto.SeasonDto;
 import com.leohp.tasteenhancer.entity.Season;
+import com.leohp.tasteenhancer.mapper.SeasonMapper;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @Stateless
@@ -32,10 +34,7 @@ public class SeasonService {
     public Response getSeasons() {
 
         List<Season> seasons = seasonDao.findAll();
-        List<SeasonDto> seasonDtos = new ArrayList<>();
-        for (Season s : seasons) {
-            seasonDtos.add(SeasonMapper.INSTANCE.seasonToSeasonDto(s));
-        }
+        List<SeasonDto> seasonDtos = SeasonMapper.INSTANCE.seasonToSeasonDto(seasons);
         return Response.ok(seasonDtos).build();
 
     }
@@ -47,7 +46,7 @@ public class SeasonService {
 
         Season s = seasonDao.findById(id);
 
-        DetailedSeasonDto detailedSeasonDto = DetailedSeasonMapper.INSTANCE.seasonToDetailedSeasonDto(s);
+        DetailedSeasonDto detailedSeasonDto = SeasonMapper.INSTANCE.seasonToDetailedSeasonDto(s);
         return Response.ok(detailedSeasonDto).status(Response.Status.OK).build();
 
     }

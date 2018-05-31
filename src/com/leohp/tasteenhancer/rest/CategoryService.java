@@ -1,18 +1,17 @@
 package com.leohp.tasteenhancer.rest;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.leohp.tasteenhancer.dao.CategoryDao;
+import com.leohp.tasteenhancer.dto.CategoryDto;
+import com.leohp.tasteenhancer.dto.CreateCategory;
+import com.leohp.tasteenhancer.dto.DetailedCategoryDto;
+import com.leohp.tasteenhancer.entity.Category;
+import com.leohp.tasteenhancer.mapper.CategoryMapper;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.UriInfo;
-
-import com.leohp.tasteenhancer.dao.CategoryDao;
-import com.leohp.tasteenhancer.dto.*;
-import com.leohp.tasteenhancer.entity.Category;
+import java.util.List;
 
 @Stateless
 @Path("/categories")
@@ -25,8 +24,6 @@ public class CategoryService {
     UriInfo uriInfo;
 
 
-
-
     public CategoryService() {
 
     }
@@ -36,10 +33,7 @@ public class CategoryService {
     public Response getCategories() {
 
         List<Category> categories = categoryDao.findAll();
-        List<CategoryDto> dtoCategories = new ArrayList<CategoryDto>();
-        for(Category c : categories) {
-            dtoCategories.add(CategoryMapper.INSTANCE.categoryToCategoryDto(c));
-        }
+        List<CategoryDto> dtoCategories = CategoryMapper.INSTANCE.categoryToCategoryDto(categories);
         return Response.ok(dtoCategories).build();
 
     }
@@ -51,7 +45,7 @@ public class CategoryService {
 
         Category c = categoryDao.findById(id);
 
-        DetailedCategoryDto detailedCategoryDTO = DetailedCategoryMapper.INSTANCE.categoryToCategoryDto(c);
+        DetailedCategoryDto detailedCategoryDTO = CategoryMapper.INSTANCE.categoryToDetailedCategoryDto(c);
         return Response.ok(detailedCategoryDTO).status(Response.Status.OK).build();
 
     }

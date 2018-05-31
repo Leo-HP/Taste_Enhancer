@@ -1,14 +1,16 @@
 package com.leohp.tasteenhancer.rest;
 
 import com.leohp.tasteenhancer.dao.OriginDao;
-import com.leohp.tasteenhancer.dto.*;
+import com.leohp.tasteenhancer.dto.CreateOrigin;
+import com.leohp.tasteenhancer.dto.DetailedOriginDto;
+import com.leohp.tasteenhancer.dto.OriginDto;
 import com.leohp.tasteenhancer.entity.Origin;
+import com.leohp.tasteenhancer.mapper.OriginMapper;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @Stateless
@@ -31,10 +33,7 @@ public class OriginService {
     public Response getOrigins() {
 
         List<Origin> origins = originDao.findAll();
-        List<OriginDto> originDtos = new ArrayList<OriginDto>();
-        for (Origin o : origins) {
-            originDtos.add(OriginMapper.INSTANCE.originToOriginDto(o));
-        }
+        List<OriginDto> originDtos = OriginMapper.INSTANCE.originToOriginDto(origins);
         return Response.ok(originDtos).build();
 
     }
@@ -46,7 +45,7 @@ public class OriginService {
 
         Origin o = originDao.findById(id);
 
-        DetailedOriginDto detailedOriginDto = DetailedOriginMapper.INSTANCE.originToDetailedOriginDto(o);
+        DetailedOriginDto detailedOriginDto = OriginMapper.INSTANCE.originToDetailedOriginDto(o);
         return Response.ok(detailedOriginDto).status(Response.Status.OK).build();
 
     }

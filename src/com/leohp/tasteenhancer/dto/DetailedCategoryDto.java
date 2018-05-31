@@ -30,7 +30,7 @@ public class DetailedCategoryDto implements Serializable {
         return ingredientDtoList;
     }
 
-    public void setProductList(List<CategoryIngredientDto> ingredientDtoList) {
+    public void setIngredientList(List<CategoryIngredientDto> ingredientDtoList) {
         this.ingredientDtoList = ingredientDtoList;
     }
 
@@ -38,10 +38,10 @@ public class DetailedCategoryDto implements Serializable {
 
     }
 
-    private DetailedCategoryDto(Long id, String name, List<CategoryIngredientDto> productList) {
+    private DetailedCategoryDto(Long id, String name, List<CategoryIngredientDto> ingredientList) {
         this.id = id;
         this.name = name;
-        this.ingredientDtoList = productList;
+        this.ingredientDtoList = ingredientList;
     }
 
     /*public static DetailedCategoryDto categoryToDTO(Category category){

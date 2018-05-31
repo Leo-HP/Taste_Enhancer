@@ -7,55 +7,92 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e38ba74-3abf-404e-ab36-5f627e6126fe" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CreateOrigin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CreateRecipe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CreateSeason.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CreateTaste.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedOriginDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedOriginMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedRecipeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedSeasonDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedSeasonMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedTasteDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedTasteMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/IngredientMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/RecipeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/SeasonMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/TasteMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/OriginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/RecipeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/SeasonService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CreateIngredient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/CategoryMapperImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/IngredientMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/IngredientMapperImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/OriginMapperImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/RecipeMapperImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/SeasonMapperImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/TasteMapperImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/IngredientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/TasteService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dao/DaoFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dao/jpa/JpaCategoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dao/jpa/JpaCategoryDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dao/jpa/JpaIngredientDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dao/jpa/JpaIngredientDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dao/jpa/JpaOriginDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dao/jpa/JpaOriginDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dao/jpa/JpaRecipeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dao/jpa/JpaRecipeDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dao/jpa/JpaSeasonDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dao/jpa/JpaSeasonDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dao/jpa/JpaTasteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dao/jpa/JpaTasteDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dto/CreateCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dto/CreateCategory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dto/CategoryMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dto/DetailedCategoryDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dto/DetailedCategoryDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dto/DetailedCategoryMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dto/DetailedOriginMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dto/DetailedRecipeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dto/DetailedSeasonMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dto/DetailedTasteMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dto/IngredientDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dto/IngredientDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dto/IngredientMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dto/OriginMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dto/RecipeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dto/SeasonMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/dto/TasteMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/entity/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/entity/Category.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/entity/Ingredient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/entity/Ingredient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/entity/Origin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/entity/Origin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/entity/Recipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/entity/Recipe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/entity/Season.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/entity/Season.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/entity/Taste.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/entity/Taste.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/rest/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/rest/CategoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Taste_Enhancer/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dao/DaoFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dao/jpa/JpaCategoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dao/jpa/JpaCategoryDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/rest/OriginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/rest/OriginService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/rest/RecipeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/rest/RecipeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/rest/SeasonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Taste_Enhancer_war_exploded/WEB-INF/classes/com/leohp/tasteenhancer/rest/SeasonService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dao/jpa/JpaIngredientDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dao/jpa/JpaIngredientDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dao/jpa/JpaOriginDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dao/jpa/JpaOriginDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dao/jpa/JpaRecipeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dao/jpa/JpaRecipeDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dao/jpa/JpaSeasonDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dao/jpa/JpaSeasonDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dao/jpa/JpaTasteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dao/jpa/JpaTasteDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dto/CreateCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dto/CreateCategory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dto/CategoryMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dto/DetailedCategoryDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dto/DetailedCategoryDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dto/DetailedCategoryMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dto/DetailedOriginMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dto/DetailedRecipeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dto/DetailedSeasonMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dto/DetailedTasteMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dto/IngredientDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dto/IngredientDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dto/IngredientMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dto/OriginMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dto/RecipeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dto/SeasonMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/dto/TasteMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/entity/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/entity/Category.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/entity/Ingredient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/entity/Ingredient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/entity/Origin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/entity/Origin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/entity/Recipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/entity/Recipe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/entity/Season.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/entity/Season.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/entity/Taste.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/entity/Taste.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/rest/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/rest/CategoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/DaoFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CreateCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CreateCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/rest/OriginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/rest/OriginService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/rest/RecipeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/rest/RecipeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/rest/SeasonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Taste_Enhancer/com/leohp/tasteenhancer/rest/SeasonService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaIngredientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaIngredientDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaSeasonDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaSeasonDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/CategoryMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedCategoryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedCategoryDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/OriginMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/OriginMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedCategoryMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedOriginMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedRecipeMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedSeasonMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedTasteMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/IngredientDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/IngredientDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/IngredientMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/OriginMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/OriginMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/RecipeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/RecipeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/SeasonMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/SeasonMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/TasteMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/TasteMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Ingredient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Origin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Origin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Recipe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Season.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Season.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Taste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Taste.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/OriginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/OriginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/RecipeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/RecipeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/SeasonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/SeasonService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,70 +104,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OriginService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/OriginService.java">
+      <file leaf-file-name="Ingredient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Ingredient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="56" column="41" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+            <state relative-caret-position="102">
+              <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+              <folding>
+                <element signature="e#2173#2174#0" expanded="true" />
+                <element signature="e#2198#2199#0" expanded="true" />
+                <element signature="e#2232#2233#0" expanded="true" />
+                <element signature="e#2260#2261#0" expanded="true" />
+                <element signature="e#2291#2292#0" expanded="true" />
+                <element signature="e#2318#2319#0" expanded="true" />
+                <element signature="e#2358#2359#0" expanded="true" />
+                <element signature="e#2390#2391#0" expanded="true" />
+                <element signature="e#2435#2436#0" expanded="true" />
+                <element signature="e#2468#2469#0" expanded="true" />
+                <element signature="e#2528#2529#0" expanded="true" />
+                <element signature="e#2572#2573#0" expanded="true" />
+                <element signature="e#2610#2611#0" expanded="true" />
+                <element signature="e#2639#2640#0" expanded="true" />
+                <element signature="e#2688#2689#0" expanded="true" />
+                <element signature="e#2724#2725#0" expanded="true" />
+                <element signature="e#2764#2765#0" expanded="true" />
+                <element signature="e#2794#2795#0" expanded="true" />
+                <element signature="e#2846#2847#0" expanded="true" />
+                <element signature="e#2884#2885#0" expanded="true" />
+                <element signature="e#2924#2925#0" expanded="true" />
+                <element signature="e#2954#2955#0" expanded="true" />
+                <element signature="e#3006#3007#0" expanded="true" />
+                <element signature="e#3044#3045#0" expanded="true" />
+                <element signature="e#3084#3085#0" expanded="true" />
+                <element signature="e#3114#3115#0" expanded="true" />
+                <element signature="e#3166#3167#0" expanded="true" />
+                <element signature="e#3204#3205#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IngredientMapperImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/IngredientMapperImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1432">
+              <caret line="95" column="10" selection-start-line="95" selection-start-column="10" selection-end-line="95" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecipeMapperImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/RecipeMapperImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#695#706#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="persistence.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="65" selection-start-line="13" selection-start-column="65" selection-end-line="13" selection-end-column="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateSeason.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CreateSeason.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-              <folding>
-                <element signature="e#164#165#0" expanded="true" />
-                <element signature="e#196#197#0" expanded="true" />
-                <element signature="e#227#228#0" expanded="true" />
-                <element signature="e#254#255#0" expanded="true" />
-                <element signature="e#294#295#0" expanded="true" />
-                <element signature="e#326#327#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateTaste.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CreateTaste.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-              <folding>
-                <element signature="e#166#167#0" expanded="true" />
-                <element signature="e#198#199#0" expanded="true" />
-                <element signature="e#229#230#0" expanded="true" />
-                <element signature="e#256#257#0" expanded="true" />
-                <element signature="e#296#297#0" expanded="true" />
-                <element signature="e#328#329#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CategoryService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/CategoryService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#786#799#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,8 +167,8 @@
       <file leaf-file-name="RecipeService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/RecipeService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="758">
-              <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+            <state relative-caret-position="404">
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -148,36 +176,71 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SeasonService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/SeasonService.java">
+      <file leaf-file-name="JpaIngredientDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaIngredientDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="136">
+              <caret line="61" column="49" lean-forward="true" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JpaRecipeDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaRecipeDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-58">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#485#486#0" expanded="true" />
+                <element signature="e#519#520#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JpaSeasonDao.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaSeasonDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="30" column="53" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Recipe.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Recipe.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Recipe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="36" column="62" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
+            <state relative-caret-position="374">
+              <caret line="25" column="92" lean-forward="true" selection-start-line="25" selection-start-column="92" selection-end-line="25" selection-end-column="92" />
               <folding>
-                <element signature="e#787#788#0" expanded="true" />
-                <element signature="e#819#820#0" expanded="true" />
+                <element signature="e#962#963#0" expanded="true" />
+                <element signature="e#994#995#0" expanded="true" />
+                <element signature="e#1047#1048#0" expanded="true" />
+                <element signature="e#1072#1073#0" expanded="true" />
+                <element signature="e#1106#1107#0" expanded="true" />
+                <element signature="e#1134#1135#0" expanded="true" />
+                <element signature="e#1165#1166#0" expanded="true" />
+                <element signature="e#1192#1193#0" expanded="true" />
+                <element signature="e#1232#1233#0" expanded="true" />
+                <element signature="e#1264#1265#0" expanded="true" />
+                <element signature="e#1312#1313#0" expanded="true" />
+                <element signature="e#1346#1347#0" expanded="true" />
+                <element signature="e#1410#1411#0" expanded="true" />
+                <element signature="e#1456#1457#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IngredientService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/IngredientService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="59" column="69" selection-start-line="59" selection-start-column="69" selection-end-line="59" selection-end-column="69" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Season.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Season.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="21" column="61" lean-forward="true" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -185,11 +248,8 @@
       <file leaf-file-name="Taste.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Taste.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-              <folding>
-                <element signature="e#761#762#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="306">
+              <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -211,37 +271,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CategoriesDto.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CategoryDto.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CattegoryMapper.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CategoryMapper.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/OriginDto.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/RecipeDto.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/SeasonDto.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/TasteDto.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/IngredientDto.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/TasteIngredientDto.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/SeasonIngredientDto.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/RecipeIngredientDto.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/OriginIngredientDto.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CategoryIngredientDto.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedCategoryMapper.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaTasteDao.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaRecipeDao.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaOriginDao.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaIngredientDao.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaCategoryDao.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/CategoryService.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CreateCategory.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/OriginMapper.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/SeasonMapper.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/TasteMapper.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedRecipeDto.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedOriginDto.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedSeasonDto.java" />
         <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedTasteDto.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/IngredientMapper.java" />
         <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/RecipeMapper.java" />
         <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedRecipeMapper.java" />
         <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedSeasonMapper.java" />
@@ -249,19 +279,49 @@
         <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedOriginMapper.java" />
         <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/createOrigin.java" />
         <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CreateOrigin.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Origin.java" />
         <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CreateRecipe.java" />
         <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CreateSeason.java" />
         <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CreateTaste.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaSeasonDao.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/OriginMapperImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/SeasonMapperImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/RecipeMapperImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/TasteMapperImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/IngredientMapper.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/IngredientDto.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/IngredientMapperImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CategoryMapper.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CategoryMapperImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/DetailedRecipeMapper.java" />
         <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedCategoryDto.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/CategoryService.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/OriginService.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/SeasonService.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/createIngredient.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/CategoryMapper.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/CategoryMapperImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/OriginMapper.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/OriginMapperImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/RecipeMapper.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/SeasonMapper.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/SeasonMapperImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/TasteMapper.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/TasteMapperImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/IngredientService.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/TasteService.java" />
+        <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/IngredientMapper.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Category.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Origin.java" />
         <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Season.java" />
         <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Taste.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Recipe.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/SeasonService.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/IngredientMapperImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaRecipeDao.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaIngredientDao.java" />
         <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/RecipeService.java" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/OriginService.java" />
-        <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaSeasonDao.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/RecipeMapperImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Ingredient.java" />
+        <option value="$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Recipe.java" />
       </list>
     </option>
   </component>
@@ -292,20 +352,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Taste_Enhancer" type="b2602c69:ProjectViewProjectNode" />
               <item name="Taste_Enhancer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Taste_Enhancer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Taste_Enhancer" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Taste_Enhancer" type="b2602c69:ProjectViewProjectNode" />
@@ -352,6 +404,13 @@
               <item name="Taste_Enhancer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="tasteenhancer" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Taste_Enhancer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taste_Enhancer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tasteenhancer" type="462c0819:PsiDirectoryNode" />
               <item name="rest" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -367,42 +426,35 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="META-INF" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Taste_Enhancer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Taste_Enhancer" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Taste_Enhancer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Taste_Enhancer" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/lib" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/eclipse-workspace/JSF_11_JPA" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Cucumber" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Pavel\GitHub\JavaJEE\Taste_Enhancer\lib" />
-      <recent name="C:\Users\Pavel\GitHub\JavaJEE\Taste_Enhancer" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Pavel\GitHub\JavaJEE\Taste_Enhancer\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Pavel\GitHub\JavaJEE\Taste_Enhancer\src\com\leohp\tasteenhancer\mapper" />
+      <recent name="C:\Users\Pavel\GitHub\JavaJEE\Taste_Enhancer\lib" />
+      <recent name="C:\Users\Pavel\GitHub\JavaJEE\Taste_Enhancer" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -530,11 +582,14 @@
       <workItem from="1527498183076" duration="1758000" />
       <workItem from="1527500101623" duration="2059000" />
       <workItem from="1527514252350" duration="14744000" />
+      <workItem from="1527577189930" duration="1738000" />
+      <workItem from="1527584682694" duration="3016000" />
+      <workItem from="1527589261179" duration="26909000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32275000" />
+    <option name="totallyTimeSpent" value="63938000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -559,8 +614,8 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32965517" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32965517" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Persistence" order="2" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17447917" />
@@ -584,24 +639,22 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32965517" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="JSF" order="5" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="JSF" order="5" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32965517" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17447917" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32965517" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17447917" />
       <window_info id="Learn" order="8" />
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -609,6 +662,8 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32965517" />
       <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
     </layout-to-restore>
   </component>
@@ -623,417 +678,94 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/CategoryService.java</url>
-          <line>37</line>
+          <line>34</line>
           <properties />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/CategoryService.java</url>
-          <line>63</line>
+          <line>57</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/CategoryService.java</url>
-          <line>38</line>
+          <line>35</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/CategoryService.java</url>
-          <line>40</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/CategoryService.java</url>
-          <line>42</line>
+          <line>36</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/SeasonService.java</url>
-          <line>33</line>
+          <line>35</line>
           <properties />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/SeasonService.java</url>
-          <line>34</line>
+          <line>36</line>
           <properties />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/SeasonService.java</url>
-          <line>36</line>
-          <properties />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/SeasonService.java</url>
-          <line>38</line>
+          <line>37</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaSeasonDao.java</url>
-          <line>30</line>
+          <line>31</line>
           <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaIngredientDao.java</url>
+          <line>36</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/RecipeService.java</url>
+          <line>58</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/RecipeService.java</url>
+          <line>59</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/RecipeService.java</url>
+          <line>61</line>
+          <properties />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaRecipeDao.java</url>
+          <line>19</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="13" />
+      <option name="time" value="18" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/TasteDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Ingredient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#992#993#0" expanded="true" />
-            <element signature="e#1019#1020#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/TasteIngredientDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/SeasonIngredientDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-          <folding>
-            <element signature="e#793#794#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
-            <element signature="e#855#856#0" expanded="true" />
-            <element signature="e#886#887#0" expanded="true" />
-            <element signature="e#913#914#0" expanded="true" />
-            <element signature="e#953#954#0" expanded="true" />
-            <element signature="e#985#986#0" expanded="true" />
-            <element signature="e#1038#1039#0" expanded="true" />
-            <element signature="e#1076#1077#0" expanded="true" />
-            <element signature="e#1149#1150#0" expanded="true" />
-            <element signature="e#1203#1204#0" expanded="true" />
-            <element signature="e#1252#1253#0" expanded="true" />
-            <element signature="e#1288#1289#0" expanded="true" />
-            <element signature="e#1355#1356#0" expanded="true" />
-            <element signature="e#1405#1406#0" expanded="true" />
-            <element signature="e#1454#1455#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
-            <element signature="e#1557#1558#0" expanded="true" />
-            <element signature="e#1607#1608#0" expanded="true" />
-            <element signature="e#1654#1655#0" expanded="true" />
-            <element signature="e#1689#1690#0" expanded="true" />
-            <element signature="e#1753#1754#0" expanded="true" />
-            <element signature="e#1801#1802#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/RecipeIngredientDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-          <folding>
-            <element signature="e#793#794#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
-            <element signature="e#855#856#0" expanded="true" />
-            <element signature="e#886#887#0" expanded="true" />
-            <element signature="e#913#914#0" expanded="true" />
-            <element signature="e#953#954#0" expanded="true" />
-            <element signature="e#985#986#0" expanded="true" />
-            <element signature="e#1038#1039#0" expanded="true" />
-            <element signature="e#1076#1077#0" expanded="true" />
-            <element signature="e#1149#1150#0" expanded="true" />
-            <element signature="e#1203#1204#0" expanded="true" />
-            <element signature="e#1252#1253#0" expanded="true" />
-            <element signature="e#1288#1289#0" expanded="true" />
-            <element signature="e#1355#1356#0" expanded="true" />
-            <element signature="e#1405#1406#0" expanded="true" />
-            <element signature="e#1454#1455#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
-            <element signature="e#1557#1558#0" expanded="true" />
-            <element signature="e#1607#1608#0" expanded="true" />
-            <element signature="e#1654#1655#0" expanded="true" />
-            <element signature="e#1689#1690#0" expanded="true" />
-            <element signature="e#1753#1754#0" expanded="true" />
-            <element signature="e#1801#1802#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CategoryIngredientDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-          <folding>
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#821#822#0" expanded="true" />
-            <element signature="e#849#850#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-            <element signature="e#907#908#0" expanded="true" />
-            <element signature="e#947#948#0" expanded="true" />
-            <element signature="e#979#980#0" expanded="true" />
-            <element signature="e#1028#1029#0" expanded="true" />
-            <element signature="e#1064#1065#0" expanded="true" />
-            <element signature="e#1131#1132#0" expanded="true" />
-            <element signature="e#1181#1182#0" expanded="true" />
-            <element signature="e#1230#1231#0" expanded="true" />
-            <element signature="e#1266#1267#0" expanded="true" />
-            <element signature="e#1333#1334#0" expanded="true" />
-            <element signature="e#1383#1384#0" expanded="true" />
-            <element signature="e#1432#1433#0" expanded="true" />
-            <element signature="e#1468#1469#0" expanded="true" />
-            <element signature="e#1535#1536#0" expanded="true" />
-            <element signature="e#1585#1586#0" expanded="true" />
-            <element signature="e#1632#1633#0" expanded="true" />
-            <element signature="e#1667#1668#0" expanded="true" />
-            <element signature="e#1731#1732#0" expanded="true" />
-            <element signature="e#1779#1780#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/OriginIngredientDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-          <folding>
-            <element signature="e#793#794#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
-            <element signature="e#855#856#0" expanded="true" />
-            <element signature="e#886#887#0" expanded="true" />
-            <element signature="e#913#914#0" expanded="true" />
-            <element signature="e#953#954#0" expanded="true" />
-            <element signature="e#985#986#0" expanded="true" />
-            <element signature="e#1038#1039#0" expanded="true" />
-            <element signature="e#1076#1077#0" expanded="true" />
-            <element signature="e#1149#1150#0" expanded="true" />
-            <element signature="e#1203#1204#0" expanded="true" />
-            <element signature="e#1252#1253#0" expanded="true" />
-            <element signature="e#1288#1289#0" expanded="true" />
-            <element signature="e#1355#1356#0" expanded="true" />
-            <element signature="e#1405#1406#0" expanded="true" />
-            <element signature="e#1454#1455#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
-            <element signature="e#1557#1558#0" expanded="true" />
-            <element signature="e#1607#1608#0" expanded="true" />
-            <element signature="e#1654#1655#0" expanded="true" />
-            <element signature="e#1689#1690#0" expanded="true" />
-            <element signature="e#1753#1754#0" expanded="true" />
-            <element signature="e#1801#1802#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedCategoryMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="65" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/IngredientDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="60" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaTasteDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding>
-            <element signature="e#353#354#0" expanded="true" />
-            <element signature="e#396#397#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/GenericDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaOriginDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaIngredientDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-          <folding>
-            <element signature="e#387#388#0" expanded="true" />
-            <element signature="e#432#433#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaRecipeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding>
-            <element signature="e#362#363#0" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/DaoFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaCategoryDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-          <folding>
-            <element signature="e#453#454#0" expanded="true" />
-            <element signature="e#502#503#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CategoryMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="57" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="12" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedOriginDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedRecipeDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="43" column="5" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="43" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedSeasonDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="44" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedTasteDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/OriginDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CategoryDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="29" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CategoriesDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/IngredientDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="40" selection-start-line="8" selection-start-column="4" selection-end-line="14" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/IngredientMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/OriginMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="11" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedRecipeMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/DetailedRecipeMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/SeasonMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="11" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/RecipeMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/RecipeMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
@@ -1043,40 +775,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedSeasonMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedTasteMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/TasteMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/TasteMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedOriginMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1087,144 +789,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-          <folding>
-            <element signature="e#166#167#0" expanded="true" />
-            <element signature="e#198#199#0" expanded="true" />
-            <element signature="e#229#230#0" expanded="true" />
-            <element signature="e#256#257#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#328#329#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CreateOrigin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-          <folding>
-            <element signature="e#178#179#0" expanded="true" />
-            <element signature="e#210#211#0" expanded="true" />
-            <element signature="e#241#242#0" expanded="true" />
-            <element signature="e#268#269#0" expanded="true" />
-            <element signature="e#308#309#0" expanded="true" />
-            <element signature="e#340#341#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Origin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
-          <folding>
-            <element signature="e#819#820#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CreateRecipe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-          <folding>
-            <element signature="e#169#170#0" expanded="true" />
-            <element signature="e#201#202#0" expanded="true" />
-            <element signature="e#259#260#0" expanded="true" />
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#331#332#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedCategoryDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Season.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
-          <folding>
-            <element signature="e#818#819#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Taste.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-          <folding>
-            <element signature="e#761#762#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Recipe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="36" column="62" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
-          <folding>
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#819#820#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/RecipeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="758">
-          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CreateTaste.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-          <folding>
-            <element signature="e#166#167#0" expanded="true" />
-            <element signature="e#198#199#0" expanded="true" />
-            <element signature="e#229#230#0" expanded="true" />
-            <element signature="e#256#257#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#328#329#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/OriginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="56" column="41" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#695#706#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CreateSeason.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+        <state relative-caret-position="170">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
           <folding>
             <element signature="e#164#165#0" expanded="true" />
             <element signature="e#196#197#0" expanded="true" />
@@ -1236,23 +814,283 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/CategoryService.java">
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaSeasonDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="374">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/SeasonMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#786#799#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/OriginMapperImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/RecipeMapperImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/IngredientMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="77" selection-start-line="21" selection-start-column="77" selection-end-line="21" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/CategoryMapperImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/CategoryMapper.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/DetailedCategoryMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="65" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedCategoryDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="33" column="51" lean-forward="true" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/DetailedOriginMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="63" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/DetailedRecipeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="63" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/DetailedSeasonMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/DetailedTasteMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="58" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CreateOrigin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/IngredientDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="40" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="14" selection-end-column="40" />
+          <folding>
+            <element signature="e#463#464#0" expanded="true" />
+            <element signature="e#488#489#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+            <element signature="e#581#582#0" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#733#734#0" expanded="true" />
+            <element signature="e#771#772#0" expanded="true" />
+            <element signature="e#844#845#0" expanded="true" />
+            <element signature="e#898#899#0" expanded="true" />
+            <element signature="e#947#948#0" expanded="true" />
+            <element signature="e#983#984#0" expanded="true" />
+            <element signature="e#1050#1051#0" expanded="true" />
+            <element signature="e#1100#1101#0" expanded="true" />
+            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="e#1185#1186#0" expanded="true" />
+            <element signature="e#1252#1253#0" expanded="true" />
+            <element signature="e#1302#1303#0" expanded="true" />
+            <element signature="e#1351#1352#0" expanded="true" />
+            <element signature="e#1387#1388#0" expanded="true" />
+            <element signature="e#1454#1455#0" expanded="true" />
+            <element signature="e#1504#1505#0" expanded="true" />
+            <element signature="e#1551#1552#0" expanded="true" />
+            <element signature="e#1586#1587#0" expanded="true" />
+            <element signature="e#1650#1651#0" expanded="true" />
+            <element signature="e#1698#1699#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/CategoryMapperImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/CategoryMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="73" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="24" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/OriginMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/OriginMapperImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="65" column="9" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/RecipeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="63" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/SeasonMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/SeasonMapperImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="64" column="9" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/TasteMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/TasteMapperImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="64" column="9" lean-forward="true" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/TasteService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/SeasonService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="136">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="62" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/OriginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/CategoryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CreateIngredient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="39" />
+          <folding>
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#809#810#0" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
+            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#932#933#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+            <element signature="e#1108#1109#0" expanded="true" />
+            <element signature="e#1144#1145#0" expanded="true" />
+            <element signature="e#1211#1212#0" expanded="true" />
+            <element signature="e#1261#1262#0" expanded="true" />
+            <element signature="e#1310#1311#0" expanded="true" />
+            <element signature="e#1346#1347#0" expanded="true" />
+            <element signature="e#1413#1414#0" expanded="true" />
+            <element signature="e#1463#1464#0" expanded="true" />
+            <element signature="e#1510#1511#0" expanded="true" />
+            <element signature="e#1545#1546#0" expanded="true" />
+            <element signature="e#1609#1610#0" expanded="true" />
+            <element signature="e#1657#1658#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1264,10 +1102,178 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaSeasonDao.java">
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/CreateRecipe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="30" column="53" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
+        <state relative-caret-position="187">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <folding>
+            <element signature="e#255#256#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dto/DetailedRecipeDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+          <folding>
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#588#589#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/IngredientMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="40" column="100" selection-start-line="40" selection-start-column="100" selection-end-line="40" selection-end-column="100" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Origin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Taste.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Season.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="21" column="61" lean-forward="true" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/IngredientService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="59" column="69" selection-start-line="59" selection-start-column="69" selection-end-line="59" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/IngredientMapperImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1432">
+          <caret line="95" column="10" selection-start-line="95" selection-start-column="10" selection-end-line="95" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaRecipeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-58">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#485#486#0" expanded="true" />
+            <element signature="e#519#520#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/rest/RecipeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/mapper/RecipeMapperImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/dao/jpa/JpaIngredientDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="61" column="49" lean-forward="true" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Ingredient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+          <folding>
+            <element signature="e#2173#2174#0" expanded="true" />
+            <element signature="e#2198#2199#0" expanded="true" />
+            <element signature="e#2232#2233#0" expanded="true" />
+            <element signature="e#2260#2261#0" expanded="true" />
+            <element signature="e#2291#2292#0" expanded="true" />
+            <element signature="e#2318#2319#0" expanded="true" />
+            <element signature="e#2358#2359#0" expanded="true" />
+            <element signature="e#2390#2391#0" expanded="true" />
+            <element signature="e#2435#2436#0" expanded="true" />
+            <element signature="e#2468#2469#0" expanded="true" />
+            <element signature="e#2528#2529#0" expanded="true" />
+            <element signature="e#2572#2573#0" expanded="true" />
+            <element signature="e#2610#2611#0" expanded="true" />
+            <element signature="e#2639#2640#0" expanded="true" />
+            <element signature="e#2688#2689#0" expanded="true" />
+            <element signature="e#2724#2725#0" expanded="true" />
+            <element signature="e#2764#2765#0" expanded="true" />
+            <element signature="e#2794#2795#0" expanded="true" />
+            <element signature="e#2846#2847#0" expanded="true" />
+            <element signature="e#2884#2885#0" expanded="true" />
+            <element signature="e#2924#2925#0" expanded="true" />
+            <element signature="e#2954#2955#0" expanded="true" />
+            <element signature="e#3006#3007#0" expanded="true" />
+            <element signature="e#3044#3045#0" expanded="true" />
+            <element signature="e#3084#3085#0" expanded="true" />
+            <element signature="e#3114#3115#0" expanded="true" />
+            <element signature="e#3166#3167#0" expanded="true" />
+            <element signature="e#3204#3205#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leohp/tasteenhancer/entity/Recipe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="25" column="92" lean-forward="true" selection-start-line="25" selection-start-column="92" selection-end-line="25" selection-end-column="92" />
+          <folding>
+            <element signature="e#962#963#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#1047#1048#0" expanded="true" />
+            <element signature="e#1072#1073#0" expanded="true" />
+            <element signature="e#1106#1107#0" expanded="true" />
+            <element signature="e#1134#1135#0" expanded="true" />
+            <element signature="e#1165#1166#0" expanded="true" />
+            <element signature="e#1192#1193#0" expanded="true" />
+            <element signature="e#1232#1233#0" expanded="true" />
+            <element signature="e#1264#1265#0" expanded="true" />
+            <element signature="e#1312#1313#0" expanded="true" />
+            <element signature="e#1346#1347#0" expanded="true" />
+            <element signature="e#1410#1411#0" expanded="true" />
+            <element signature="e#1456#1457#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

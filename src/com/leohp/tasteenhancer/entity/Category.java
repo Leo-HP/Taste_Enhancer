@@ -1,13 +1,12 @@
 package com.leohp.tasteenhancer.entity;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.persistence.*;
-
 @Entity
 @Table(name = "categories")
-public class Category implements Serializable{
+public class Category implements Serializable {
 
     /**
      *
@@ -18,21 +17,16 @@ public class Category implements Serializable{
     private Long id;
     private String name;
 
-    @ManyToMany
-    @JoinTable(name="category_ingredient",
-            joinColumns=@JoinColumn(name="category_id", referencedColumnName="id"),
-            inverseJoinColumns=@JoinColumn(name="ingredient_id", referencedColumnName="id"))
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "categories")
     private List<Ingredient> ingredients;
 
     public Category() {
     }
 
 
-
     public Category(String name) {
         this.name = name;
     }
-
 
 
     public Long getId() {
@@ -58,7 +52,6 @@ public class Category implements Serializable{
     public void setIngredients(List<Ingredient> ingredients) {
         this.ingredients = ingredients;
     }
-
 
 
 }
