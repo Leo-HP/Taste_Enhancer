@@ -35,11 +35,10 @@ public class JpaTasteDao implements TasteDao {
 
     @Override
     public void update(Taste object) {
-        Query query = em.createQuery("update Taste taste set taste.name=:name, taste.ingredients=:ingredients where taste.id=:id");
-        query.setParameter("name", object.getName());
-        query.setParameter("id", object.getId());
-        query.setParameter("ingredients", object.getIngredients());
-        query.executeUpdate();
+        Taste taste = em.find(Taste.class, object.getId());
+        taste.setName(object.getName());
+        taste.setIngredients(object.getIngredients());
+        em.merge(taste);
     }
 
     @Override

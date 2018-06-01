@@ -35,11 +35,10 @@ public class JpaRecipeDao implements RecipeDao {
 
     @Override
     public void update(Recipe object) {
-        Query query = em.createQuery("update Recipe rec set rec.name=:name, rec.ingredients=:ingredients where rec.id=:id");
-        query.setParameter("name", object.getName());
-        query.setParameter("id", object.getId());
-        query.setParameter("ingredients", object.getIngredients());
-        query.executeUpdate();
+        Recipe recipe = em.find(Recipe.class, object.getId());
+        recipe.setName(object.getName());
+        recipe.setIngredients(object.getIngredients());
+        em.merge(recipe);
     }
 
     @Override

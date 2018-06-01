@@ -4,14 +4,16 @@ import com.leohp.tasteenhancer.dao.CategoryDao;
 import com.leohp.tasteenhancer.entity.Category;
 
 import javax.ejb.Stateless;
-import javax.persistence.*;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import java.util.List;
 
 @Stateless
 public class JpaCategoryDao implements CategoryDao {
 
 
-    @PersistenceContext(name="PU")
+    @PersistenceContext(name = "PU")
     private EntityManager entityManager;
 
     public JpaCategoryDao() {
@@ -19,7 +21,7 @@ public class JpaCategoryDao implements CategoryDao {
 
     @Override
     public void create(Category object) {
-            entityManager.persist(object);
+        entityManager.persist(object);
     }
 
     @Override
@@ -37,11 +39,10 @@ public class JpaCategoryDao implements CategoryDao {
 
     @Override
     public void update(Category object) {
-        Query query = entityManager.createQuery("update Category cat set cat.name=:name, cat.ingredients=:ingredients where cat.id=:id");
-        query.setParameter("name", object.getName());
-        query.setParameter("id", object.getId());
-        query.setParameter("ingredients", object.getIngredients());
-        query.executeUpdate();
+        Category category = entityManager.find(Category.class, object.getId());
+        category.setName(object.getName());
+        category.setIngredients(object.getIngredients());
+        entityManager.merge(category);
     }
 
     @Override
@@ -54,8 +55,8 @@ public class JpaCategoryDao implements CategoryDao {
     @Override
     public void remove(Category object) {
 
-            Category category = entityManager.find(Category.class, object.getId());
-            entityManager.remove(category);
+        Category category = entityManager.find(Category.class, object.getId());
+        entityManager.remove(category);
 
     }
 }

@@ -36,11 +36,10 @@ public class JpaOriginDao implements OriginDao {
 
     @Override
     public void update(Origin object) {
-        Query query = em.createQuery("update Origin ori set ori.name=:name, ori.ingredients=:ingredients where ori.id=:id");
-        query.setParameter("name", object.getName());
-        query.setParameter("id", object.getId());
-        query.setParameter("ingredients", object.getIngredients());
-        query.executeUpdate();
+        Origin origin = em.find(Origin.class, object.getId());
+        origin.setName(object.getName());
+        origin.setIngredients((object.getIngredients()));
+        em.merge(origin);
     }
 
     @Override

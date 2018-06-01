@@ -4,20 +4,22 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
+/**
+ * JPA entity using annotation
+ */
 @Entity
 @Table(name = "categories")
 public class Category implements Serializable {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = -3147486974618264158L;
+    // id auto generated
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
 
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "categories")
+    // many to many relationship, joined table is declared in Ingredient
+    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "categories")
     private List<Ingredient> ingredients;
 
     public Category() {

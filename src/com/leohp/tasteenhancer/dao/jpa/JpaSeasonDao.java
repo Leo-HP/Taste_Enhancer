@@ -6,8 +6,6 @@ import com.leohp.tasteenhancer.entity.Season;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
-import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Stateless
@@ -35,11 +33,10 @@ public class JpaSeasonDao implements SeasonDao {
 
     @Override
     public void update(Season object) {
-        Query query = em.createQuery("update Season sea set sea.name=:name, sea.ingredients=:ingredients where sea.id=:id");
-        query.setParameter("name", object.getName());
-        query.setParameter("id", object.getId());
-        query.setParameter("ingredients", object.getIngredients());
-        query.executeUpdate();
+        Season season = em.find(Season.class, object.getId());
+        season.setName(object.getName());
+        season.setIngredients(object.getIngredients());
+        em.merge(season);
     }
 
     @Override
