@@ -5,6 +5,7 @@ import com.leohp.tasteenhancer.entity.Taste;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
@@ -22,7 +23,15 @@ public class JpaTasteDao implements TasteDao {
 
     @Override
     public Taste findById(Long id) {
-        Taste taste = em.find(Taste.class, id);
+        Query query = em.createQuery("Select tastes from Taste tastes where id=:id");
+        query.setParameter("id", id);
+        Taste taste = null;
+        try {
+            taste = (Taste) query.getSingleResult();
+        }catch (NoResultException e){
+            e.printStackTrace();
+        }
+
         return taste;
     }
 

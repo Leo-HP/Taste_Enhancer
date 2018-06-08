@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.List;
 
 @Entity
-@Table(name = "tastes")
+@Table(name = "Taste")
 public class Taste implements Serializable {
 
     /**
@@ -17,7 +17,7 @@ public class Taste implements Serializable {
     private Long id;
     private String name;
 
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "tastes")
+    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "tastes")
     private List<Ingredient> ingredients;
 
     public Taste() {

@@ -6,7 +6,7 @@ import java.util.List;
 import javax.persistence.*;
 
 @Entity
-@Table(name="origins")
+@Table(name="Origin")
 public class Origin implements Serializable {
 
     /**
@@ -19,7 +19,7 @@ public class Origin implements Serializable {
     private Long id;
     private String name;
 
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "origins")
+    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "origins")
     private List<Ingredient> ingredients;
 
     public Origin() {

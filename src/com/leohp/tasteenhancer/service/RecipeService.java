@@ -11,13 +11,15 @@ import java.util.List;
 public interface RecipeService {
     DataModel getRecipes();
 
-    void addRecipe();
+    void addRecipe(Recipe recipe);
 
     String updateRecipe(Recipe recipe);
 
     String deleteRecipe(Recipe recipe);
 
-    String addIngredient(Recipe recipe, Ingredient ingredient);
+    String addIngredient(Recipe recipe, Long ingredientId);
 
-    String addIngredients(Recipe recipe, List<Ingredient> ingredients);
+    String addIngredients(Recipe recipe, List<Long> ingredientIds);
+
+    List<Recipe> getCommonRecipes(List<Ingredient> ingredients);
 }

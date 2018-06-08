@@ -45,6 +45,12 @@ public class CategoryServiceImpl implements CategoryService {
         return "category-list";
     }
 
+    @Override
+    public Category findCategoryById(Long id){
+        Category category = categoryDao.findById(id);
+        return category;
+    }
+
     public void setCategories(DataModel categories) {
         this.categories = categories;
     }

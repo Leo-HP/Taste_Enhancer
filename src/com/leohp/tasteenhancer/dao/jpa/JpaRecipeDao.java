@@ -5,6 +5,7 @@ import com.leohp.tasteenhancer.entity.Recipe;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
@@ -22,7 +23,15 @@ public class JpaRecipeDao implements RecipeDao {
 
     @Override
     public Recipe findById(Long id) {
-        Recipe recipe = em.find(Recipe.class, id);
+        Query query = em.createQuery("Select recipes from Recipe recipes where id=:id");
+        query.setParameter("id", id);
+        Recipe recipe = null;
+        try {
+            recipe = (Recipe) query.getSingleResult();
+        }catch (NoResultException e){
+            e.printStackTrace();
+        }
+
         return recipe;
     }
 

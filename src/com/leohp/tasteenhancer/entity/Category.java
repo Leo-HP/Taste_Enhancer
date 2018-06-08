@@ -8,7 +8,7 @@ import java.util.List;
  * JPA entity using annotation
  */
 @Entity
-@Table(name = "categories")
+@Table(name = "Category")
 public class Category implements Serializable {
 
     private static final long serialVersionUID = -3147486974618264158L;

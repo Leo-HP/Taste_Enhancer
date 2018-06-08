@@ -42,5 +42,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="javax.el:el-api:2.2.1-b04" level="project" />
   </component>
 </module>

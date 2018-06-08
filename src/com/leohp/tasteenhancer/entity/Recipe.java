@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name="recipes")
+@Table(name="Recipe")
 public class Recipe implements Serializable {
 
     /**
@@ -20,7 +20,7 @@ public class Recipe implements Serializable {
     private Long id;
     private String name;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name="recipe_ingredient",
             joinColumns=@JoinColumn(name="recipe_id", referencedColumnName="id"),
             inverseJoinColumns=@JoinColumn(name="ingredient_id", referencedColumnName="id"))
