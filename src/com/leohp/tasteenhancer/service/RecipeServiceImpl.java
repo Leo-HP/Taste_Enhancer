@@ -9,9 +9,7 @@ import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 @Stateless
 public class RecipeServiceImpl implements RecipeService {
@@ -70,9 +68,7 @@ public class RecipeServiceImpl implements RecipeService {
             ingredients.add(ingredientDao.findById(id));
         }
         List<Ingredient> baseIngredients = recipe.getIngredients();
-        for (Ingredient ingredient : ingredients) {
-            baseIngredients.add(ingredient);
-        }
+        baseIngredients.addAll(ingredients);
         recipe.setIngredients(baseIngredients);
         recipeDao.update(recipe);
         recipes.setWrappedData(recipeDao.findAll());
@@ -80,19 +76,30 @@ public class RecipeServiceImpl implements RecipeService {
     }
 
     @Override
-    public List<Recipe> getCommonRecipes(List<Ingredient> ingredients) {
+    public List<Recipe> getCommonRecipes(Set<Ingredient> ingredients) {
         List<Recipe> recipes = new ArrayList<>();
-        for (Ingredient ingredient : ingredients){
-            for (Recipe recipe : ingredient.getRecipes()){
+        List<Recipe> recipesToRemove = new ArrayList<>();
+        List<Long> recipeIds = new ArrayList<>();
+        Set<Recipe> hs = new HashSet<>();
+        for (Ingredient ingredient : ingredients) {
+            for (Recipe recipe : ingredient.getRecipes()) {
                 recipes.add(recipe);
             }
         }
-        for (Recipe recipe : recipes){
-            int occurences = Collections.frequency(recipes, recipe);
-            if (occurences != ingredients.size()){
-                recipes.remove(recipe);
+        for (Recipe recipe : recipes) {
+            recipeIds.add(recipe.getId());
+        }
+
+        for (Recipe recipe : recipes) {
+            int occurences = Collections.frequency(recipeIds, recipe.getId());
+            if (occurences != ingredients.size()) {
+                recipesToRemove.add(recipe);
             }
         }
+        recipes.removeAll(recipesToRemove);
+        hs.addAll(recipes);
+        recipes.clear();
+        recipes.addAll(hs);
         return recipes;
     }
 }

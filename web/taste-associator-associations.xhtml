@@ -13,20 +13,41 @@
     <ui:composition template="WEB-INF/templates/basicTemplate.xhtml">
         <ui:define name="content">
             <h:form>
-                <h:outputText value="Select ingredient"/>
-                <h:selectOneMenu id="ingredient" value="#{ingredientBean.ingredient}">
-                    <f:selectItems value="#{ingredientBean.ingredients}" var="i" itemValue="#{i}"
-                                   itemLabel="#{i.name}"/>
-                </h:selectOneMenu>
-                <h:commandButton value="choose" action="#{ingredientBean.getAssociations}"/>
+                <h:dataTable id="selectedIngredients" value="#{ingredientBean.displaySelectedIngredients}" var="i"
+                             styleClass="ingredient-table" headerClass="ingredient-table-header"
+                             rowClasses="ingredient-table-odd-row, ingredient-table-even-row">
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputLabel value="ID"/>
+                        </f:facet>
+                        <h:outputText value="#{i.id}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputLabel value="name"/>
+                        </f:facet>
+                        <h:outputText value="#{i.name}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputLabel value="remove"/>
+                        </f:facet>
+                        <h:commandButton value="remove" action="#{ingredientBean.unselect(i)}"/>
+                    </h:column>
+                </h:dataTable>
             </h:form>
+            <br/>
             <h:form>
                 <h:outputText value="Select ingredient"/>
                 <h:selectOneMenu id="association1" value="#{ingredientBean.ingredient}">
                     <f:selectItems value="#{ingredientBean.associations}" var="i" itemValue="#{i}"
                                    itemLabel="#{i.name}"/>
                 </h:selectOneMenu>
-                <h:commandButton value="choose" action="#{ingredientBean.getAssociations}"/>
+                <h:commandButton value="choose" action="taste-associator-associations"/>
+            </h:form>
+
+            <h:form>
+                <h:commandButton value="reset" action="#{ingredientBean.reset}"/>
             </h:form>
         </ui:define>
     </ui:composition>

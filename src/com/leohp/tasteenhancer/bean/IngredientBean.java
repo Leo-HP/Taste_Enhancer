@@ -2,12 +2,15 @@ package com.leohp.tasteenhancer.bean;
 
 import com.leohp.tasteenhancer.entity.Ingredient;
 import com.leohp.tasteenhancer.service.IngredientService;
+import com.leohp.tasteenhancer.service.RecipeService;
 
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.model.CollectionDataModel;
 import javax.faces.model.DataModel;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @ManagedBean(name = "ingredientBean")
 @SessionScoped
@@ -15,6 +18,9 @@ public class IngredientBean {
 
     @EJB
     private IngredientService ingredientService;
+
+    @EJB
+    private RecipeService recipeService;
 
     private DataModel ingredients;
     private Ingredient ingredient;
@@ -24,10 +30,19 @@ public class IngredientBean {
     private Long tasteId;
     private Long ingrdientId;
     private DataModel associations;
-    private List<Ingredient> selectedIngredients;
+    private Set<Ingredient> selectedIngredients;
+    private DataModel displaySelectedIngredients;
+
+    public DataModel getDisplaySelectedIngredients() {
+        selectedIngredients.add(ingredient);
+        displaySelectedIngredients.setWrappedData(selectedIngredients);
+        return displaySelectedIngredients;
+    }
 
     public IngredientBean() {
         this.ingredient = new Ingredient();
+        this.selectedIngredients = new HashSet<>();
+        this.displaySelectedIngredients = new CollectionDataModel();
     }
 
     public DataModel getIngredients() {
@@ -78,9 +93,24 @@ public class IngredientBean {
     }
 
     public DataModel getAssociations() {
-        associations = ingredientService.getIngredientsInRecipes(ingredient.getRecipes());
-
+        if (ingredient.getId() != null) {
+            //selectedIngredients.add(ingredient);
+            displaySelectedIngredients.setWrappedData(selectedIngredients);
+        }
+        if (selectedIngredients.size() == 0) {
+            Set<Ingredient> ingredients = new HashSet<>();
+            ingredients.add(ingredient);
+            associations = ingredientService.getCommonIngredients(ingredients);
+        } else {
+            associations = ingredientService.getCommonIngredients(selectedIngredients);
+        }
         return associations;
+    }
+
+    public void unselect(Ingredient ingredient) {
+        selectedIngredients.remove(ingredient);
+        //this.ingredient = null;
+        displaySelectedIngredients.setWrappedData(selectedIngredients);
     }
 
     public IngredientService getIngredientService() {
@@ -89,6 +119,13 @@ public class IngredientBean {
 
     public void setIngredientService(IngredientService ingredientService) {
         this.ingredientService = ingredientService;
+    }
+
+    public String reset() {
+        selectedIngredients.clear();
+        //this.ingredient = null;
+        displaySelectedIngredients.setWrappedData(selectedIngredients);
+        return "taste-associator";
     }
 
     public void setIngredients(DataModel ingredients) {
@@ -133,5 +170,17 @@ public class IngredientBean {
 
     public void setTasteId(Long tasteId) {
         this.tasteId = tasteId;
+    }
+
+    public void setAssociations(DataModel associations) {
+        this.associations = associations;
+    }
+
+    public Set<Ingredient> getSelectedIngredients() {
+        return selectedIngredients;
+    }
+
+    public void setSelectedIngredients(Set<Ingredient> selectedIngredients) {
+        this.selectedIngredients = selectedIngredients;
     }
 }

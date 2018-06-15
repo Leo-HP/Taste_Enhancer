@@ -6,6 +6,7 @@ import com.leohp.tasteenhancer.entity.Recipe;
 import javax.ejb.Local;
 import javax.faces.model.DataModel;
 import java.util.List;
+import java.util.Set;
 
 @Local
 public interface RecipeService {
@@ -21,5 +22,5 @@ public interface RecipeService {
 
     String addIngredients(Recipe recipe, List<Long> ingredientIds);
 
-    List<Recipe> getCommonRecipes(List<Ingredient> ingredients);
+    List<Recipe> getCommonRecipes(Set<Ingredient> ingredients);
 }

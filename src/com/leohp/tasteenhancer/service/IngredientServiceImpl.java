@@ -8,8 +8,9 @@ import javax.ejb.Stateless;
 import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Stateless
 public class IngredientServiceImpl implements IngredientService {
@@ -24,6 +25,8 @@ public class IngredientServiceImpl implements IngredientService {
     private SeasonDao seasonDao;
     @EJB
     private TasteDao tasteDao;
+    @EJB
+    private RecipeService recipeService;
 
     private DataModel ingredients;
     private DataModel associations;
@@ -36,7 +39,6 @@ public class IngredientServiceImpl implements IngredientService {
         }
         return ingredients;
     }
-
 
 
     @Override
@@ -104,29 +106,50 @@ public class IngredientServiceImpl implements IngredientService {
     }
 
     @Override
-    public DataModel getIngredientsInRecipes(List<Recipe> recipes) {
+    public DataModel getAssociations() {
         if (associations == null) {
             associations = new ListDataModel();
-            associations.setWrappedData(ingredientDao.getIngredientsInRecipes(recipes));
+            associations.setWrappedData(associations);
         }
         return associations;
     }
 
     @Override
-    public List<Ingredient> getCommonIngredients(List<Recipe> recipes) {
-        List<Ingredient> ingredients = new ArrayList<>();
-        for (Recipe recipe : recipes){
-            for (Ingredient ingredient : recipe.getIngredients()){
-                ingredients.add(ingredient);
+    public DataModel getCommonIngredients(Set<Ingredient> ingredients) {
+        List<Recipe> recipes = recipeService.getCommonRecipes(ingredients);
+        //List<Ingredient> ingredientsToRemove = new ArrayList<>();
+        Set<Long> hs = new HashSet<>();
+        Set<Long> hs1 = new HashSet<>();
+        if (associations == null) {
+            associations = new ListDataModel();
+        }
+        List<Ingredient> ingredientList = new ArrayList<>();
+        for (Recipe recipe : recipes) {
+            for (Ingredient ingredient : recipe.getIngredients()) {
+                ingredientList.add(ingredient);
             }
         }
-        for (Ingredient ingredient : ingredients){
-            int occurences = Collections.frequency(ingredients, ingredient);
-            if (occurences != recipes.size()){
-                ingredients.remove(ingredient);
+        /*for (Ingredient ingredient : ingredientList) {
+            int occurences = Collections.frequency(ingredientList, ingredient);
+            if (occurences != recipes.size()) {
+                ingredientsToRemove.add(ingredient);
             }
+        }*/
+        for (Ingredient ingredient : ingredientList) {
+            hs.add(ingredient.getId());
         }
-        return ingredients;
+        for (Ingredient ingredient : ingredients) {
+            hs1.add(ingredient.getId());
+        }
+        hs.removeAll(hs1);
+        ingredientList.clear();
+        for (Long id : hs) {
+            ingredientList.add(ingredientDao.findById(id));
+        }
+
+        ingredientList.removeAll(ingredients);
+        associations.setWrappedData(ingredientList);
+        return associations;
     }
 
     @Override

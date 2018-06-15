@@ -32,7 +32,7 @@
                 <h:form>
                     <h:outputText value="Origin"/>
                     <h:selectOneMenu id="origin" value="#{ingredientBean.originId}">
-                        <f:selectItems value="#{originBean.origins}" var="o" itemValue="#{o}" itemLabel="#{o.name}"/>
+                        <f:selectItems value="#{originBean.origins}" var="o" itemValue="#{o.id}" itemLabel="#{o.name}"/>
                     </h:selectOneMenu>
                     <h:commandButton value="add origin" action="#{ingredientBean.addOrigin}"/>
                 </h:form>
