@@ -5,8 +5,12 @@ import java.util.List;
 
 import javax.persistence.*;
 
+/**
+ * JPA entity using annotation
+ * creating the table with the name "Season"
+ */
 @Entity
-@Table(name="seasons")
+@Table(name="Season")
 public class Season implements Serializable {
 
     /**
@@ -14,22 +18,25 @@ public class Season implements Serializable {
      */
     private static final long serialVersionUID = 7435802340771144323L;
 
+    // id is auto generated
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
 
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "seasons")
+    // Many to many relationship mapped in the Ingredient class
+    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "seasons")
     private List<Ingredient> ingredients;
 
+    // constructors
     public Season() {
-        // TODO Auto-generated constructor stub
     }
 
     public Season(String name) {
         this.name = name;
     }
 
+    // getters and setters
     public Long getId() {
         return id;
     }

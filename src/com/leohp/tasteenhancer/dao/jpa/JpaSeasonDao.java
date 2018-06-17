@@ -5,7 +5,9 @@ import com.leohp.tasteenhancer.entity.Season;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import java.util.List;
 
 @Stateless
@@ -21,7 +23,15 @@ public class JpaSeasonDao implements SeasonDao {
 
     @Override
     public Season findById(Long id) {
-        Season season = em.find(Season.class, id);
+        Query query = em.createQuery("Select seasons from Season seasons where id=:id");
+        query.setParameter("id", id);
+        Season season = null;
+        try {
+            season = (Season) query.getSingleResult();
+        }catch (NoResultException e){
+            e.printStackTrace();
+        }
+
         return season;
     }
 

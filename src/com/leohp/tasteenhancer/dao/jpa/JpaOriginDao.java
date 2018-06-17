@@ -5,6 +5,7 @@ import com.leohp.tasteenhancer.entity.Origin;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
@@ -23,7 +24,15 @@ public class JpaOriginDao implements OriginDao {
 
     @Override
     public Origin findById(Long id) {
-        Origin origin = em.find(Origin.class, id);
+        Query query = em.createQuery("Select origins from Origin origins where id=:id");
+        query.setParameter("id", id);
+        Origin origin = null;
+        try {
+            origin = (Origin) query.getSingleResult();
+        }catch (NoResultException e){
+            e.printStackTrace();
+        }
+
         return origin;
     }
 

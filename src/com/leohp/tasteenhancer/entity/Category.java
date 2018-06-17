@@ -6,9 +6,10 @@ import java.util.List;
 
 /**
  * JPA entity using annotation
+ * creating the table with the name "Category"
  */
 @Entity
-@Table(name = "categories")
+@Table(name = "Category")
 public class Category implements Serializable {
 
     private static final long serialVersionUID = -3147486974618264158L;
@@ -22,15 +23,16 @@ public class Category implements Serializable {
     @ManyToMany(fetch = FetchType.EAGER, mappedBy = "categories")
     private List<Ingredient> ingredients;
 
+    // Constructors
     public Category() {
     }
-
 
     public Category(String name) {
         this.name = name;
     }
 
 
+    // getters and setters
     public Long getId() {
         return id;
     }

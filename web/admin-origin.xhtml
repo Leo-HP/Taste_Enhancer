@@ -17,25 +17,25 @@
                 <h:commandButton value="ADD" action="admin-origin-add"/>
             </h:form>
             <h:form>
-                <h:dataTable border="0" rules="all" value="#{categoryBean.categories}" var="category">
+                <h:dataTable border="0" rules="all" value="#{originBean.origins}" var="origin">
                     <h:column>
                         <f:facet name="header">
                             <h:outputText value="ID"/>
                         </f:facet>
-                        <h:outputText value="#{category.id}"/>
+                        <h:outputText value="#{origin.id}"/>
                     </h:column>
                     <h:column>
                         <f:facet name="header">
                             <h:outputText value="Name"/>
                         </f:facet>
-                        <h:outputText value="#{category.name}"/>
+                        <h:outputText value="#{origin.name}"/>
                     </h:column>
                     <h:column>
                         <f:facet name="header">
                             <h:outputText value="Operation"/>
                         </f:facet>
-                        <h:commandButton value="Edit" action="#{categoryBean.editCategory}"/>
-                        <h:commandButton value="Delete" action="#{categoryBean.deleteCategory}"/>
+                        <h:commandButton value="Edit" action="#{originBean.editOrigin}"/>
+                        <h:commandButton value="Delete" action="#{originBean.deleteOrigin}"/>
                     </h:column>
                 </h:dataTable>
 

@@ -18,6 +18,8 @@ public class IngredientService {
 
     @EJB
     private IngredientDao ingredientDao;
+    @EJB
+    private com.leohp.tasteenhancer.service.IngredientService ingredientService;
 
     @Context
     UriInfo uriInfo;
@@ -58,5 +60,16 @@ public class IngredientService {
         ingredientDao.create(ingredient);
         UriBuilder uriBuilder = UriBuilder.fromUri(uriInfo.getRequestUri() + "/" + String.valueOf(ingredient.getId()));
         return Response.ok().status(Response.Status.CREATED).build();
+    }
+
+    @DELETE
+    @Path("/delete_ingredient/{id}")
+    public Response deleteIngredient(@PathParam("id") Long id) {
+        Ingredient ingredient = ingredientService.findIngredientById(id);
+        if (ingredient == null) {
+            return Response.status(Response.Status.GONE).build();
+        }
+        ingredientService.deleteIngredient(ingredient);
+        return Response.noContent().build();
     }
 }

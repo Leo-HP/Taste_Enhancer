@@ -5,10 +5,14 @@ import com.leohp.tasteenhancer.entity.Category;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
 
+/*
+** JPA implementation of the category DAO
+ */
 @Stateless
 public class JpaCategoryDao implements CategoryDao {
 
@@ -26,7 +30,15 @@ public class JpaCategoryDao implements CategoryDao {
 
     @Override
     public Category findById(Long id) {
-        Category category = entityManager.find(Category.class, id);
+        Query query = entityManager.createQuery("Select categories from Category categories where id=:id");
+        query.setParameter("id", id);
+        Category category = null;
+        try {
+            category = (Category) query.getSingleResult();
+        }catch (NoResultException e){
+            e.printStackTrace();
+        }
+
         return category;
     }
 

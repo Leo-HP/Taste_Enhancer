@@ -28,6 +28,7 @@ public class CategoryBean implements Serializable {
     }
 
     public String addCategory(){
+        category.setId(null);
         categoryService.addCategory(category);
         return "success";
     }
@@ -45,6 +46,14 @@ public class CategoryBean implements Serializable {
     public String updateCategory(){
         categoryService.updateCategory(category);
         return "success";
+    }
+
+    public Category findCategoryById(Long id){
+        if (id == null){
+            throw new IllegalArgumentException("no id provided");
+        }
+        return categoryService.findCategoryById(id);
+
     }
 
     public CategoryService getCategoryService() {
@@ -65,5 +74,10 @@ public class CategoryBean implements Serializable {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
     }
 }
