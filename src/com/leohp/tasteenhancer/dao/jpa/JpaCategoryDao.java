@@ -10,6 +10,9 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
 
+/*
+** JPA implementation of the category DAO
+ */
 @Stateless
 public class JpaCategoryDao implements CategoryDao {
 

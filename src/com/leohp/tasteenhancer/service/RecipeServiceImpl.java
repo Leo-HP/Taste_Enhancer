@@ -61,6 +61,7 @@ public class RecipeServiceImpl implements RecipeService {
         return "recipe-list";
     }
 
+    // add a list of ingredients to the existing ingredients of a recipe
     @Override
     public String addIngredients(Recipe recipe, List<Long> ingredientIds) {
         List<Ingredient> ingredients = new ArrayList<>();
@@ -75,6 +76,7 @@ public class RecipeServiceImpl implements RecipeService {
         return "recipe-list";
     }
 
+    // return the list of recipes common to all the ingredients of a list
     @Override
     public List<Recipe> getCommonRecipes(Set<Ingredient> ingredients) {
         List<Recipe> recipes = new ArrayList<>();

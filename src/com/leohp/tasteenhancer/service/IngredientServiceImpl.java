@@ -61,6 +61,7 @@ public class IngredientServiceImpl implements IngredientService {
         return "ingredient-list";
     }
 
+    // add one category to the existing catgories of an ingredient
     @Override
     public String addCategorry(Ingredient ingredient, Long categoryId) {
         Category category = categoryDao.findById(categoryId);
@@ -71,7 +72,7 @@ public class IngredientServiceImpl implements IngredientService {
         ingredients.setWrappedData(ingredientDao.findAll());
         return "ingredient-list";
     }
-
+    // add one oringin to the existing origins of an ingredient
     @Override
     public String addOrigin(Ingredient ingredient, Long originId) {
         Origin origin = originDao.findById(originId);
@@ -82,7 +83,7 @@ public class IngredientServiceImpl implements IngredientService {
         ingredients.setWrappedData(ingredientDao.findAll());
         return "ingredient-list";
     }
-
+    // add one season to the existing seasons of an ingredient
     @Override
     public String addSeason(Ingredient ingredient, Long seasonId) {
         Season season = seasonDao.findById(seasonId);
@@ -93,7 +94,7 @@ public class IngredientServiceImpl implements IngredientService {
         ingredients.setWrappedData(ingredientDao.findAll());
         return "ingredient-list";
     }
-
+    // add one tatse to the existing tastes of an ingredient
     @Override
     public String addTaste(Ingredient ingredient, Long tasteId) {
         Taste taste = tasteDao.findById(tasteId);
@@ -114,6 +115,7 @@ public class IngredientServiceImpl implements IngredientService {
         return associations;
     }
 
+    // return the igredients which are found in recipes with all the ingredients in a list
     @Override
     public DataModel getCommonIngredients(Set<Ingredient> ingredients) {
         List<Recipe> recipes = recipeService.getCommonRecipes(ingredients);

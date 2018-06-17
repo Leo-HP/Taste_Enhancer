@@ -4,6 +4,10 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
+/**
+ * JPA entity using annotation
+ * creating the table with the name "Taste"
+ */
 @Entity
 @Table(name = "Taste")
 public class Taste implements Serializable {
@@ -12,14 +16,17 @@ public class Taste implements Serializable {
      *
      */
     private static final long serialVersionUID = 3839969660922031842L;
+    // id is auto generated
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
 
+    // Many to many relationship mapped in the Ingredient class
     @ManyToMany(fetch = FetchType.EAGER, mappedBy = "tastes")
     private List<Ingredient> ingredients;
 
+    // constructors
     public Taste() {
     }
 
@@ -27,6 +34,7 @@ public class Taste implements Serializable {
         this.name = name;
     }
 
+    // getter and setters
     public Long getId() {
         return id;
     }

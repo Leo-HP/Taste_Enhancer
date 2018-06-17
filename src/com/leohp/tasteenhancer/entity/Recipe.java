@@ -1,31 +1,35 @@
 package com.leohp.tasteenhancer.entity;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.persistence.*;
-
-
+/**
+ * JPA entity using annotation
+ * creating the table with the name "Recipe"
+ */
 @Entity
-@Table(name="Recipe")
+@Table(name = "Recipe")
 public class Recipe implements Serializable {
 
     /**
      *
      */
     private static final long serialVersionUID = 4653427093390849431L;
-
+    // id is auto generated
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
 
+    // Many to many relationship : a recipe as many ingredients and an ingredient as many recipes, the link is made via a table matching the ids
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name="recipe_ingredient",
-            joinColumns=@JoinColumn(name="recipe_id", referencedColumnName="id"),
-            inverseJoinColumns=@JoinColumn(name="ingredient_id", referencedColumnName="id"))
+    @JoinTable(name = "recipe_ingredient",
+            joinColumns = @JoinColumn(name = "recipe_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "ingredient_id", referencedColumnName = "id"))
     private List<Ingredient> ingredients;
 
+    // Constructors
     public Recipe() {
         // TODO Auto-generated constructor stub
     }
@@ -35,12 +39,12 @@ public class Recipe implements Serializable {
     }
 
 
-
     public Recipe(String name, List<Ingredient> ingredients) {
         this.name = name;
         this.ingredients = ingredients;
     }
 
+    // getters and setters
     public Long getId() {
         return id;
     }
@@ -64,7 +68,6 @@ public class Recipe implements Serializable {
     public void setIngredients(List<Ingredient> ingredients) {
         this.ingredients = ingredients;
     }
-
 
 
 }

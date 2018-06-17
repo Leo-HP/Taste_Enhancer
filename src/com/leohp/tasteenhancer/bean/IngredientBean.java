@@ -92,6 +92,7 @@ public class IngredientBean {
         return "success";
     }
 
+    // return the list of ingrdients that could go with the selected ingredients
     public DataModel getAssociations() {
         if (ingredient.getId() != null) {
             //selectedIngredients.add(ingredient);
@@ -107,10 +108,18 @@ public class IngredientBean {
         return associations;
     }
 
+    // remove the selected ingredient from the list of selected ingredients
     public void unselect(Ingredient ingredient) {
         selectedIngredients.remove(ingredient);
-        //this.ingredient = null;
         displaySelectedIngredients.setWrappedData(selectedIngredients);
+    }
+
+
+    // unselect all ingredients and start new associations
+    public String reset() {
+        selectedIngredients.clear();
+        displaySelectedIngredients.setWrappedData(selectedIngredients);
+        return "taste-associator";
     }
 
     public IngredientService getIngredientService() {
@@ -119,13 +128,6 @@ public class IngredientBean {
 
     public void setIngredientService(IngredientService ingredientService) {
         this.ingredientService = ingredientService;
-    }
-
-    public String reset() {
-        selectedIngredients.clear();
-        //this.ingredient = null;
-        displaySelectedIngredients.setWrappedData(selectedIngredients);
-        return "taste-associator";
     }
 
     public void setIngredients(DataModel ingredients) {
